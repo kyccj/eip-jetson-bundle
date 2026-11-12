@@ -233,6 +233,82 @@
     "b1_spk": "4235d17270650ff5",
     "b16": "6b3b76707be28441"
    }
+  },
+  "base_T16_s42": {
+   "method": "baseline",
+   "seed": 42,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "SCR150/ckpt/base_T16_ft60/epoch_060.pth",
+   "ckpt_sha256_16": "056710ed0f4c0875",
+   "acc_original_1000": 58.9,
+   "onnx": {
+    "b1": "models/base_T16_s42_b1.onnx",
+    "b1_spk": "models/base_T16_s42_b1_spk.onnx",
+    "b16": "models/base_T16_s42_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "9462700ae66ef3a4",
+    "b1_spk": "300c59a9df3cd9b0",
+    "b16": "675309a010d1e168"
+   }
+  },
+  "base_T16_s43": {
+   "method": "baseline",
+   "seed": 43,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/base_T16_ft60_s43/epoch_060.pth",
+   "ckpt_sha256_16": "ce4644a6a81119b7",
+   "acc_original_1000": 59.0,
+   "onnx": {
+    "b1": "models/base_T16_s43_b1.onnx",
+    "b1_spk": "models/base_T16_s43_b1_spk.onnx",
+    "b16": "models/base_T16_s43_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "7db000546084e537",
+    "b1_spk": "a1b19d73a99f298b",
+    "b16": "18f3957fdbb0a2fc"
+   }
+  },
+  "base_T16_s44": {
+   "method": "baseline",
+   "seed": 44,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/base_T16_ft60_s44/epoch_060.pth",
+   "ckpt_sha256_16": "0ba34e17ff366315",
+   "acc_original_1000": 59.4,
+   "onnx": {
+    "b1": "models/base_T16_s44_b1.onnx",
+    "b1_spk": "models/base_T16_s44_b1_spk.onnx",
+    "b16": "models/base_T16_s44_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "c5fe9f4303dbc872",
+    "b1_spk": "e0e51bec33196193",
+    "b16": "1776e1f4ccf66d1a"
+   }
+  },
+  "base_T16_s45": {
+   "method": "baseline",
+   "seed": 45,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/base_T16_ft60_s45/epoch_060.pth",
+   "ckpt_sha256_16": "28b5385c6024d3aa",
+   "acc_original_1000": 58.5,
+   "onnx": {
+    "b1": "models/base_T16_s45_b1.onnx",
+    "b1_spk": "models/base_T16_s45_b1_spk.onnx",
+    "b16": "models/base_T16_s45_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "3969998c1517f1f8",
+    "b1_spk": "073e3a0d32a3ccfe",
+    "b16": "6b0e312f97c90045"
+   }
   }
  }
 }
