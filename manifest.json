@@ -1,0 +1,238 @@
+{
+ "model": "VGGSNN 9층 (model_variant=pyramid_late64, image 32x32, IAF 빼기 리셋 threshold 1.0 min_v_mem -1.0, SumPool, conv0 뒤 BN), CIFAR10-DVS",
+ "input": "[B, T, 2, 32, 32] float32 (uint8 이벤트 개수 프레임 -> float32), 출력 logits [B,10] (T 평균), layer_spikes [B,9]",
+ "data": {
+  "frames_T8": "data/frames_T8.npz (x uint8 [1000,8,2,32,32], y [1000])",
+  "frames_T16": "data/frames_T16.npz (x uint8 [1000,16,2,32,32], y [1000])"
+ },
+ "models": {
+  "ours_T16_s42": {
+   "method": "ours (λ 상한 1.25e-4)",
+   "seed": 42,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "CAP/ckpt/cap125_ours_T16_s42/epoch_060.pth",
+   "ckpt_sha256_16": "915abc6acf2199c9",
+   "acc_original_1000": 59.5,
+   "onnx": {
+    "b1": "models/ours_T16_s42_b1.onnx",
+    "b1_spk": "models/ours_T16_s42_b1_spk.onnx",
+    "b16": "models/ours_T16_s42_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "cdc1b7a852c8e435",
+    "b1_spk": "aeef871b4eb462b0",
+    "b16": "dad30c149815fe48"
+   }
+  },
+  "base_T8_s42": {
+   "method": "baseline",
+   "seed": 42,
+   "T": 8,
+   "epoch": 60,
+   "ckpt_rel": "SCR150/ckpt/base_T8_ft60/epoch_060.pth",
+   "ckpt_sha256_16": "137d5a029a1251af",
+   "acc_original_1000": 58.5,
+   "onnx": {
+    "b1": "models/base_T8_s42_b1.onnx",
+    "b1_spk": "models/base_T8_s42_b1_spk.onnx",
+    "b16": "models/base_T8_s42_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "9822507d98aa7a65",
+    "b1_spk": "818b440831e88f70",
+    "b16": "d90bcb155525e7df"
+   }
+  },
+  "sip2e8_T16_s42": {
+   "method": "SIP λ2e-8",
+   "seed": 42,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "SCR150/ckpt/scrsue_l2e-8_T16_s42/epoch_060.pth",
+   "ckpt_sha256_16": "590e77e11d7321da",
+   "acc_original_1000": 58.5,
+   "onnx": {
+    "b1": "models/sip2e8_T16_s42_b1.onnx",
+    "b1_spk": "models/sip2e8_T16_s42_b1_spk.onnx",
+    "b16": "models/sip2e8_T16_s42_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "052d3ca9cb29cd5a",
+    "b1_spk": "47adfae9670f8c4e",
+    "b16": "59f62b156b12a0e2"
+   }
+  },
+  "ours_T16_s43": {
+   "method": "ours (λ 상한 1.25e-4)",
+   "seed": 43,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "CAP/ckpt/cap125_ours_T16_s43/epoch_060.pth",
+   "ckpt_sha256_16": "ca1c1871567f4da2",
+   "acc_original_1000": 57.4,
+   "onnx": {
+    "b1": "models/ours_T16_s43_b1.onnx",
+    "b1_spk": "models/ours_T16_s43_b1_spk.onnx",
+    "b16": "models/ours_T16_s43_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "54b71757de6c1a31",
+    "b1_spk": "482251837f1296e6",
+    "b16": "2589d6c653e80049"
+   }
+  },
+  "base_T8_s43": {
+   "method": "baseline",
+   "seed": 43,
+   "T": 8,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/base_T8_ft60_s43/epoch_060.pth",
+   "ckpt_sha256_16": "c119e76f5d1037cb",
+   "acc_original_1000": 60.3,
+   "onnx": {
+    "b1": "models/base_T8_s43_b1.onnx",
+    "b1_spk": "models/base_T8_s43_b1_spk.onnx",
+    "b16": "models/base_T8_s43_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "95b0fac85ad3544a",
+    "b1_spk": "8e345b8ab361e4d8",
+    "b16": "71c3f634c76d5aa4"
+   }
+  },
+  "sip2e8_T16_s43": {
+   "method": "SIP λ2e-8",
+   "seed": 43,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/scrsue_l2e-8_T16_s43/epoch_060.pth",
+   "ckpt_sha256_16": "c150b93ad4d38da3",
+   "acc_original_1000": 58.4,
+   "onnx": {
+    "b1": "models/sip2e8_T16_s43_b1.onnx",
+    "b1_spk": "models/sip2e8_T16_s43_b1_spk.onnx",
+    "b16": "models/sip2e8_T16_s43_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "cdb9552aa1e5bffd",
+    "b1_spk": "a7aa5c3a92c83b3d",
+    "b16": "45f2fd41e7ac75f9"
+   }
+  },
+  "ours_T16_s44": {
+   "method": "ours (λ 상한 1.25e-4)",
+   "seed": 44,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "CAP/ckpt/cap125_ours_T16_s44/epoch_060.pth",
+   "ckpt_sha256_16": "5d23000e2eb3d333",
+   "acc_original_1000": 59.099999999999994,
+   "onnx": {
+    "b1": "models/ours_T16_s44_b1.onnx",
+    "b1_spk": "models/ours_T16_s44_b1_spk.onnx",
+    "b16": "models/ours_T16_s44_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "1e7645669aca164c",
+    "b1_spk": "741f518fc5d140c7",
+    "b16": "dcb2769b191029ce"
+   }
+  },
+  "base_T8_s44": {
+   "method": "baseline",
+   "seed": 44,
+   "T": 8,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/base_T8_ft60_s44/epoch_060.pth",
+   "ckpt_sha256_16": "b64a8e838bfcd93a",
+   "acc_original_1000": 59.599999999999994,
+   "onnx": {
+    "b1": "models/base_T8_s44_b1.onnx",
+    "b1_spk": "models/base_T8_s44_b1_spk.onnx",
+    "b16": "models/base_T8_s44_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "fbc66d89d5a62f68",
+    "b1_spk": "958d3deda61b4463",
+    "b16": "5b039cc065c36d19"
+   }
+  },
+  "sip2e8_T16_s44": {
+   "method": "SIP λ2e-8",
+   "seed": 44,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/scrsue_l2e-8_T16_s44/epoch_060.pth",
+   "ckpt_sha256_16": "b754eee61a543232",
+   "acc_original_1000": 58.699999999999996,
+   "onnx": {
+    "b1": "models/sip2e8_T16_s44_b1.onnx",
+    "b1_spk": "models/sip2e8_T16_s44_b1_spk.onnx",
+    "b16": "models/sip2e8_T16_s44_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "2181fc5eb8f0b3be",
+    "b1_spk": "3a4f0a8f6d9936dc",
+    "b16": "a98d1c21fb24a8ac"
+   }
+  },
+  "ours_T16_s45": {
+   "method": "ours (λ 상한 1.25e-4)",
+   "seed": 45,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "CAP/ckpt/cap125_ours_T16_s45/epoch_060.pth",
+   "ckpt_sha256_16": "328043a0168298d7",
+   "acc_original_1000": 57.99999999999999,
+   "onnx": {
+    "b1": "models/ours_T16_s45_b1.onnx",
+    "b1_spk": "models/ours_T16_s45_b1_spk.onnx",
+    "b16": "models/ours_T16_s45_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "39e598e93a247dcf",
+    "b1_spk": "473fdbce94a6f885",
+    "b16": "b55e8c333b3c08a0"
+   }
+  },
+  "base_T8_s45": {
+   "method": "baseline",
+   "seed": 45,
+   "T": 8,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/base_T8_ft60_s45/epoch_060.pth",
+   "ckpt_sha256_16": "4b4b8ffd3befc8c4",
+   "acc_original_1000": 59.8,
+   "onnx": {
+    "b1": "models/base_T8_s45_b1.onnx",
+    "b1_spk": "models/base_T8_s45_b1_spk.onnx",
+    "b16": "models/base_T8_s45_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "0ee73e09449d31b2",
+    "b1_spk": "1a1877adc9fa0689",
+    "b16": "418bc982ae574474"
+   }
+  },
+  "sip2e8_T16_s45": {
+   "method": "SIP λ2e-8",
+   "seed": 45,
+   "T": 16,
+   "epoch": 60,
+   "ckpt_rel": "H1/ckpt/scrsue_l2e-8_T16_s45/epoch_060.pth",
+   "ckpt_sha256_16": "991216324adeeb90",
+   "acc_original_1000": 58.599999999999994,
+   "onnx": {
+    "b1": "models/sip2e8_T16_s45_b1.onnx",
+    "b1_spk": "models/sip2e8_T16_s45_b1_spk.onnx",
+    "b16": "models/sip2e8_T16_s45_b16.onnx"
+   },
+   "onnx_sha256_16": {
+    "b1": "4b3ec7706d7e9012",
+    "b1_spk": "4235d17270650ff5",
+    "b16": "6b3b76707be28441"
+   }
+  }
+ }
+}
